@@ -1,0 +1,25 @@
+.slider{
+    background-color: #aaa;
+    width: 90%;
+}
+
+.slide{
+    height: 200px;
+    width: 200px;
+}
+
+.row{
+    text-align: center;
+    margin: 30px 10%;
+}
+
+.row-image{
+    max-width: 100%;
+    max-height: 200px;
+
+}
+
+.row-text{
+    max-width: 100%;
+    max-height: 200px;;
+}

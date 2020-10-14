@@ -1,0 +1,29 @@
+:root{
+    --verde-claro: #006741;
+    --verde-escuro: #00442a;
+    --off-white: #ededed
+}
+
+.navbar{
+    background-color:var(--verde-claro);
+}
+
+.navbar-logo{
+    width: 100px;
+}
+
+.navbar ul{
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar ul li{
+    margin: 0 20px;
+    padding: 0 15px;
+    border-radius: 7px;
+
+}
+
+.navbar ul li:hover{
+    background-color: var(--verde-escuro);
+}

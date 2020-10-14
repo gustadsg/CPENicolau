@@ -1,0 +1,37 @@
+:root{
+    --verde-claro: #006741;
+    --verde-escuro: #00442a;
+    --off-white: #ededed
+}
+
+.main-footer{
+    background-color: var(--verde-escuro);
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+.footer-logo{
+    width: 100px;
+}
+address {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 30px;
+    width: 100%;
+}
+
+.address-item{
+    display: block;
+    padding: 0 20px;
+}
+
+.address-title{
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+}
