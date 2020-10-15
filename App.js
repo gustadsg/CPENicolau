@@ -100,7 +100,7 @@ function App() {
         <h1>
         <img className="image2"src="/images/LogoNicolauescuro.png"/>
         </h1> 
-            <Form.Group>
+            
             <div className="inputfooter">
 
             <Form.Label column sm="5">
@@ -115,9 +115,9 @@ function App() {
               E-mail :
             </Form.Label>
             </div>
-            </Form.Group>
+            
 
-            <Form.Group>
+            
             <div className="inputfooter">
 
             <Form.Label column sm="5">
@@ -132,7 +132,7 @@ function App() {
               nicolauadocoes@cpejr.com.br
             </Form.Label>
             </div>
-            </Form.Group>
+            
         </div>
         
        
