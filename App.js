@@ -1,17 +1,17 @@
 import React from "react";
-
-import { Form, Button,Nav,Navbar, FormGroup} from "react-bootstrap"
+import { Form, Button,Nav,Navbar} from "react-bootstrap"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./global.css"
 import"./App.css"
 
 
 
-
 function App() {
   return (
+    // div que engloba toda página
     <div>
-              
+      
+      {/*Navbar do Formulário*/}     
           <div className="Nav">
             <Navbar >
               
@@ -31,71 +31,73 @@ function App() {
             </div>
     
 
-
-  <div className="base">  
-  
-    <div className="container">
-      <div>   
-               
-      <img src="/images/adocao.png"/>
-       
-     
-  
-          <div className="inputs">
-          <Form.Group>
-          <Form.Control type="text" placeholder="Nome" />
-          </Form.Group>
-
-          <Form.Group>
-          <Form.Control type="text" placeholder="Cpf" />
-          </Form.Group>
-
-          <Form.Group>
-          <Form.Control type="text" placeholder="Telefone" />
-          </Form.Group>
-
-          <Form.Group controlId="formBasicEmail">
-          <Form.Control type="email" placeholder="E-mail" />
-          </Form.Group> 
-
-          <Form.Group> 
-          <form>
-            <div class="form-row">
-              <div class="col">
-              <Form.Control type="text" placeholder="Estado" required />
-              </div>
-              <div class="col">
-              <Form.Control type="text" placeholder="Cidade" required />
-              </div>
-            </div>
-          </form>
-          </Form.Group>
+          <div className="base">  {/*engloba os botões, os campos de texto e o título*/}
           
-          <Form.Group>
-          <form>
-            <div class="form-row">
-              <div class="col">
-              <Form.Control type="text" placeholder="Bairro" required />
+            <div className="container">
+              <div>   
+                      
+              <img src="/images/adocao.png"/> {/*imagem do titúlo*/}
+              
+            
+          
+                  <div className="inputs">  {/*entradas de texto e os botões*/}
+                    
+                  <Form.Group> {/*form.group é utilizado para espaçar as caixaas de texto*/} 
+                  <Form.Control type="text" placeholder="Nome" />
+                  </Form.Group>
+                  
+
+                  <Form.Group>
+                  <Form.Control type="text" placeholder="Cpf" />
+                  </Form.Group>
+
+                  <Form.Group>
+                  <Form.Control type="text" placeholder="Telefone" />
+                  </Form.Group>
+
+                  <Form.Group controlId="formBasicEmail">
+                  <Form.Control type="email" placeholder="E-mail" />
+                  </Form.Group> 
+
+                  <Form.Group> 
+                  <form>
+                    <div class="form-row">
+                      <div class="col">
+                      <Form.Control type="text" placeholder="Estado" required />
+                      </div>
+                      <div class="col">
+                      <Form.Control type="text" placeholder="Cidade" required />
+                      </div>
+                    </div>
+                  </form>
+                  </Form.Group>
+                  
+                  <Form.Group>
+                  <form>
+                    <div class="form-row">
+                      <div class="col">
+                      <Form.Control type="text" placeholder="Bairro" required />
+                      </div>
+                      <div class="col">
+                      <Form.Control type="text" placeholder="Rua" required />
+                      </div>
+                      <div class="col">
+                      <Form.Control type="text" placeholder="Número" required />
+                      </div>
+                    </div>
+                  </form>
+                  </Form.Group>
+
+                  <button type="button" class="btn btn-outline-success">Cadastro</button>
+
+
+                 
               </div>
-              <div class="col">
-              <Form.Control type="text" placeholder="Rua" required />
-              </div>
-              <div class="col">
-              <Form.Control type="text" placeholder="Número" required />
-              </div>
-            </div>
-          </form>
-          </Form.Group>
-
-          <button type="button" class="btn btn-outline-success">Cadastro</button>
-
-
-
-            </div>
-          </div>  
+            </div>  
+          </div>
         </div>
-      </div>
       
+          {/*Footer do formulário*/} 
       <div className="footer">
         <h1>
         <img className="image2"src="/images/LogoNicolauescuro.png"/>
@@ -104,38 +106,30 @@ function App() {
             <div className="inputfooter">
 
             <Form.Label column sm="5">
-              Endereço :
+            Endereço:
+            <p>{'\n'}</p>
+            Rua ...
             </Form.Label>
 
             <Form.Label column sm="5">            
-              Telefone :           
+              Telefone : 
+              <p>{'\n'}</p>
+              (31)3333-3333          
             </Form.Label>
 
             <Form.Label column sm="2">
               E-mail :
-            </Form.Label>
-            </div>
-            
-
-            
-            <div className="inputfooter">
-
-            <Form.Label column sm="5">
-              Rua ...
-            </Form.Label>
-
-            <Form.Label column sm="5">            
-              (31) 3333-3333          
-            </Form.Label>
-
-            <Form.Label column sm="2">
+              <p>{'\n'}</p>
               nicolauadocoes@cpejr.com.br
             </Form.Label>
             </div>
             
+
+            
         </div>
         
-       
+        
+
       </div>
 
       
