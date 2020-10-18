@@ -42,7 +42,7 @@ function App() {
           
                   <div className="inputs">  {/*entradas de texto e os botões*/}
                     
-                  <Form.Group> {/*form.group é utilizado para espaçar as caixaas de texto*/} 
+                  <Form.Group> {/*form.group é utilizado para espaçar as caixas de texto*/} 
                   <Form.Control type="text" placeholder="Nome" />
                   </Form.Group>
                   

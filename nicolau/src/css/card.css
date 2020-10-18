@@ -11,15 +11,33 @@
     margin: auto;
     margin-bottom: 30px;
     width: 18rem;
+    max-width: 18rem;
+    height: 990px;
+    position: relative;
 }
 
 .card img{
     max-width: 300px;
+    height: 300px;
+    
 }
 
+.card-text{
+    max-width: 16rem;
+    text-align: justify;
+}
+
+.card ul{
+    position: absolute;
+    bottom: 90px;
+    width: 16rem;
+}
 .btn-primary{
     background-color: var(--verde-escuro);
     border: none;
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
 }
 
 .btn-primary:hover{

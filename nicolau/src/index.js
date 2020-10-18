@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom'
-import Base from './Base'
-import Adote from './Adote'
+import Home from './Home'
+
 
 
 ReactDOM.render(
   <>
-    <Adote/>
+    <Home/>
   </>,
   document.getElementById('root')
 );
