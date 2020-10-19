@@ -3,32 +3,14 @@ import { Form, Button,Nav,Navbar} from "react-bootstrap"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./global.css"
 import"./App.css"
-
+import Base from "./Base";
 
 
 function App() {
   return (
-    // div que engloba toda página
-    <div>
+    
+    <Base>
       
-      {/*Navbar do Formulário*/}     
-          <div className="Nav">
-            <Navbar >
-              
-              <img className="image" src="/images/LogoNicolau.png"/>
-              <Nav className="mr-auto">
-                
-              </Nav>
-              
-              <Form inline>
-                <Button className="botao1 botao"variant="outline-info">Home</Button>
-
-                <Button className="botao"variant="outline-info">Adote</Button>
-              </Form>
-           
-            </Navbar>
-            
-            </div>
     
 
           <div className="base">  {/*engloba os botões, os campos de texto e o título*/}
@@ -95,42 +77,10 @@ function App() {
               </div>
             </div>  
           </div>
-        </div>
-      
-          {/*Footer do formulário*/} 
-      <div className="footer">
-        <h1>
-        <img className="image2"src="/images/LogoNicolauescuro.png"/>
-        </h1> 
-            
-            <div className="inputfooter">
-
-            <Form.Label column sm="5">
-            Endereço:
-            <p>{'\n'}</p>
-            Rua ...
-            </Form.Label>
-
-            <Form.Label column sm="5">            
-              Telefone : 
-              <p>{'\n'}</p>
-              (31)3333-3333          
-            </Form.Label>
-
-            <Form.Label column sm="2">
-              E-mail :
-              <p>{'\n'}</p>
-              nicolauadocoes@cpejr.com.br
-            </Form.Label>
-            </div>
-            
-
-            
-        </div>
-        
+        </div>       
         
 
-      </div>
+      </Base>
 
       
       
