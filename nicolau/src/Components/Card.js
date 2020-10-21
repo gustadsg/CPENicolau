@@ -22,11 +22,9 @@ export default function Card (props){
                     <li className="list-group-item"></li>
                 </ul>
                 {/* <!-- adopt button --> */}
-                <a href="http://google.com" className="btn btn-primary">ver mais</a>
                 <a href="http://google.com" className="btn btn-primary">Adote-me</a>
 
             </div>
-            
         </div>
 
 
