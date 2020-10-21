@@ -10,27 +10,27 @@
     min-width: fit-content;
     margin: auto;
     margin-bottom: 30px;
-    width: 18rem;
-    max-width: 18rem;
-    height: 990px;
+    width: 24rem;
+    max-width: 24rem;
+    height: 900px;
     position: relative;
 }
 
 .card img{
-    max-width: 300px;
-    height: 300px;
+    max-width: 100%;
+    min-height: 300px;
     
 }
 
 .card-text{
-    max-width: 16rem;
+    max-width: 23rem;
     text-align: justify;
 }
 
 .card ul{
     position: absolute;
     bottom: 90px;
-    width: 16rem;
+    width: 22rem;
 }
 .btn-primary{
     background-color: var(--verde-escuro);

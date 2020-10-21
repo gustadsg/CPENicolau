@@ -1,0 +1,14 @@
+.slider-container{
+    width: 100%;
+}
+
+.slider{
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+.slider img{
+    margin: auto;
+    max-width: 50vw;
+    max-height: 60vh;
+}
