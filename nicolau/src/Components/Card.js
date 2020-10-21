@@ -1,6 +1,7 @@
 import React from 'react'
 import '../css/bootstrap.min.css'
 import '../css/card.css'
+import {Link} from "react-router-dom"
 
 export default function Card (props){
     return(
@@ -22,8 +23,8 @@ export default function Card (props){
                     <li className="list-group-item"></li>
                 </ul>
                 {/* <!-- adopt button --> */}
-                <a href="http://google.com" className="btn btn-primary">Adote-me</a>
-
+                <Link className="btn btn-primary" to="/Formulario">Adote-me</Link>
+                
             </div>
         </div>
 

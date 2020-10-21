@@ -1,13 +1,11 @@
 import React from 'react';
-import ReactDOM from 'react-dom'
-import Home from './Home'
-import Adote from './Adote'
+import ReactDOM from 'react-dom';
 
-
+import Routes from "./routes"
 
 ReactDOM.render(
   <>
-    <Adote/>
+    <Routes />
   </>,
   document.getElementById('root')
 );
