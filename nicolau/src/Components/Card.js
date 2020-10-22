@@ -3,16 +3,39 @@ import Modal from 'react-modal'
 import {Link} from "react-router-dom"
 import '../css/bootstrap.min.css'
 import '../css/card.css'
+
 import dog from '../assets/dogIcon.svg'
+import cat from '../assets/catIcon.svg'
 import ampulheta from '../assets/ampulhetaIcon.svg'
 import female from '../assets/femaleIcon.svg'
+import male from '../assets/maleIcon.svg'
 
 // import {Form} from 'react-bootstrap'
 
 export default function Card (props){
     const [modalIsOpen, setModalIsOpen] = useState(false)
     Modal.setAppElement('#root');
-    const verdeClaro = "#006741"
+    const verdeClaro = "#006741";
+    let animalInfo;
+    let genderInfo;
+    let ageInfo = 
+    <span className="info"><img alt="icone" src={ampulheta} style={{width: "20px", height: "20px"}} /> {props.age} meses</span>
+
+    if (props.race === "Cachorro"){
+        animalInfo = <span className="info"><img alt="icone" src={dog} style={{width: "20px", height: "20px"}} /> {props.race}</span>
+    }
+    if (props.race === "Gato"){
+        animalInfo = <span className="info"><img alt="icone" src={cat} style={{width: "20px", height: "20px"}} /> { props.race }</span>
+    }
+
+    if(props.gender === "Macho"){
+        genderInfo = <span className="info"><img alt="icone" src={male} style={{width: "20px", height: "20px"}} /> { props.gender }</span>
+
+    }
+    if(props.gender === "Fêmea"){
+        genderInfo = <span className="info"><img alt="icone" src={female} style={{width: "20px", height: "20px"}} /> { props.gender }</span>
+    }
+
 
     return(
         <>
@@ -25,9 +48,9 @@ export default function Card (props){
                 {/* <!-- info --> */}
                 
                 <div className="infos-container">
-                    <span className="info"><img alt="icone" src={dog} style={{width: "20px", height: "20px"}} /> {props.race}</span>
-                    <span className="info"><img alt="icone" src={female} style={{width: "20px", height: "20px"}} /> {props.gender}</span>
-                    <span className="info"><img alt="icone" src={ampulheta} style={{width: "20px", height: "20px"}} /> {props.age} meses</span>
+                    {animalInfo}
+                    {genderInfo} 
+                    {ageInfo}
                 </div>                    
                 
                 {/* <!--  buttons --> */}
@@ -54,9 +77,9 @@ export default function Card (props){
                         <p>{props.children}</p>
 
                         <ul className="modal-ul">
-                            <li><img src={dog} style={{width: "20px", marginRight: "20px"}}/>{props.race}</li>
-                            <li><img src={female} style={{width: "20px", marginRight: "20px"}}/>{props.gender}</li>
-                            <li><img src={ampulheta} style={{width: "20px", marginRight: "20px"}}/>{props.age} meses</li>
+                            <li>{animalInfo}</li>
+                            <li>{genderInfo}</li>
+                            <li>{ageInfo}</li>
                         </ul>
                 </div>
                 <div className="btn-container container-fluid">

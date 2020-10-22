@@ -36,7 +36,7 @@ export default function Adote(){
                     <Card name="Loba" race="Cachorro" gender="Fêmea" age="6" >
                         A Loba é uma cadela extremamente calma, companheira e fiel. Gosta de brincar ao ar livre e se dá muito bem com outros cães! Tem porte médio, está saudável e com a vacinação em dia. Gosta de brincar com garrafas pet e de destruir jardins floridos. 
                     </Card>
-                    <Card name="Bono Vox e Kitty Kat" race="Cachorros" gender="Fêmeas" age="18" >
+                    <Card name="Bono Vox e Kitty Kat" race="Cachorro" gender="Fêmea" age="18" >
                         Os gêmeos Bono Vox e Kitty Kat são inseparáveis. São bem quietinhos e obedientes. Adoram carinho na barriga e petiscos de frango. Provavelmente não vão proteger sua casa de um assalto, mas nunca conhecerão nenhuma dupla mais companheira e fiel. Estão saudáveis, fortes, e pesam aproximadamente 45 kg. Os dois têm distúrbio de imagem, então não é saudável mencionar o peso na frente deles.
                     </Card>
                     <Card name="Tori" race="Cachorro" gender="Fêmea" age="8" >
