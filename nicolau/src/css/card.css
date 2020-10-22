@@ -12,12 +12,10 @@
     margin-bottom: 30px;
     width: 24rem;
     max-width: 24rem;
-    height: 900px;
-    position: relative;
 }
 
 .card img{
-    width: 26rem;
+    width: 100%;
     height: 300px;
     
 }
@@ -28,14 +26,12 @@
 }
 
 .card ul{
-    position: absolute;
     bottom: 90px;
     width: 22rem;
 }
-.btn-primary{
+.adoption-btn{
     background-color: var(--verde-escuro);
     border: none;
-    position: absolute;
     bottom: 30px;
     left: 30px;
 }
@@ -43,3 +39,52 @@
 .btn-primary:hover{
     background-color: var(--verde-claro);
 }
+
+.img-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;   
+    overflow: hidde
+}
+
+
+/* modal stuff here */
+
+
+.modal-img{
+    height: 400px;
+    max-width: 100%;
+
+}
+
+.modal-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width:60%;
+    margin: auto;
+}
+
+
+.modal-body p{
+    font-size: larger;
+}
+
+.modal-ul li{
+    /* list-style: none; */
+    font-size: large;
+}
+
+
+
+.btn-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.btn{
+    width: 10vw;
+    margin: 20px ;
+}
+

@@ -1,17 +1,16 @@
-:root{
-    --verde-claro:#005f41 ;
-    --verde-escuro:#163e21;
-    --branco-offwhite: #ededed;
-  
-  }
-
-.formscontainer{
-width: 45vw;
-text-align: center;
-margin: 5vh auto;
+:root {
+  --verde-claro: #005f41;
+  --verde-escuro: #163e21;
+  --branco-offwhite: #ededed;
 }
 
-h1{
-    color: var(--verde-claro);
-    text-align: center;
+.formscontainer {
+  width: 45vw;
+  text-align: center;
+  margin: 5vh auto;
+}
+
+h1 {
+  color: var(--verde-claro);
+  text-align: center;
 }
