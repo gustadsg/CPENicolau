@@ -7,17 +7,17 @@ import {Link} from "react-router-dom"
 export default function Navbar(){
     return(
         <>
-            <nav class="navbar navbar-dark">
-                <Link class="" to="/">
-                    <img src={logo} alt="logotipo Nicolau" class="navbar-logo"/>
+            <nav className="navbar navbar-dark">
+                <Link className="" to="/">
+                    <img src={logo} alt="logotipo Nicolau" className="navbar-logo"/>
                 </Link>
                     
-                <ul class="navbar-nav">
-                    <li class= "nav-item">
-                        <Link  class="nav-link" to="/">Home</Link>
+                <ul className="navbar-nav">
+                    <li className= "nav-item">
+                        <Link  className="nav-link" to="/">Home</Link>
                     </li>
-                    <li class="nav-item active adote-btn">
-                        <Link class="nav-link " to="/Adote">Adote <span class="sr-only">(current)</span></Link>
+                    <li className="nav-item active adote-btn">
+                        <Link className="nav-link " to="/Adote">Adote <span class="sr-only">(current)</span></Link>
                     </li>
                 </ul>
             </nav>
