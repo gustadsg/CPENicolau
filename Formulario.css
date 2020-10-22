@@ -15,3 +15,7 @@ h1{
     color: var(--verde-claro);
     text-align: center;
 }
+
+.cadastro{
+margin: 0px;
+}
