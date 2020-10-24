@@ -1,7 +1,7 @@
-import React from "react";
-import Base from "./Base";
+import React from 'react'
 import { Form } from "react-bootstrap";
 import "../../css/Formulario.css";
+import Base from '../../Components/Base'
 
 function Home() {
   function handleSubmit() {

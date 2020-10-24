@@ -10,6 +10,10 @@
   margin: 5vh auto;
 }
 
+.cadastro{
+  margin: 0;
+}
+
 h1 {
   color: var(--verde-claro);
   text-align: center;
