@@ -20,9 +20,8 @@ export default function Footer() {
                 <span className="address-title">E-mail</span>
                 <p>umemailqualquer@email.com</p>
             </div>
-
             </address>
-            <p style={{color: "#777", opacity: ".4"}}>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik" >Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></p>
+            <p style={{color: "#777", opacity: ".5"}}>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik" >Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></p>
         </footer>
         )
 }

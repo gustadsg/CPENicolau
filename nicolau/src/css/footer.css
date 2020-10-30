@@ -38,3 +38,8 @@ address {
     font-size: 18px;
     font-weight: bold;
 }
+
+.main-footer p{
+    text-align: center;
+    margin: 0 20px 30px 20px;
+}
