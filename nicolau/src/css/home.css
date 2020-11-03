@@ -1,89 +1,87 @@
-@import url('https://fonts.googleapis.com/css2?family=Chilanka&family=Lemonada:wght@300;400&family=Sansita+Swashed:wght@500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Chilanka&family=Lemonada:wght@300;400&family=Sansita+Swashed:wght@500;600;700&display=swap");
 
-:root{
-    --verde-claro: #006741;
-    --verde-escuro: #00442a;
-    --off-white: #ededed
+:root {
+  --verde-claro: #006741;
+  --verde-escuro: #00442a;
+  --off-white: #ededed;
 }
 
-body{
-    background-color: var(--off-white);
+body {
+  background-color: var(--off-white);
 }
 
-h2{
-    font-family: 'Sansita Swashed', cursive;
-    font-size: xx-large;
+h2 {
+  font-family: "Sansita Swashed", cursive;
+  font-size: xx-large;
 }
-p{
-    font-family: sans-serif;
+p {
+  font-family: sans-serif;
 }
-#historia{
-    background-color: var(--verde-escuro);
-    padding: 40px 10vw;
-    font-size: 20px;
-    text-align: justify;
-    color: white;
-
-}
-
-#historia h2, #valores h2, #missao h2{
-    text-align: center;
-    text-decoration: underline 2px;
-
+#historia {
+  background-color: var(--verde-escuro);
+  padding: 40px 10vw;
+  font-size: 20px;
+  text-align: justify;
+  color: white;
 }
 
-
-.slider-container{
-    background-color: var(--verde-escuro);
-}
-#slider-description{
-    text-align: center;
-    font-size: x-large;
+#historia h2,
+#valores h2,
+#missao h2 {
+  text-align: center;
+  text-decoration: underline 2px;
 }
 
-#missao{
-    padding: 40px 10vw;
-    font-size: x-large;
-    text-align: center;
+.slider-container {
+  background-color: var(--verde-escuro);
+}
+#slider-description {
+  text-align: center;
+  font-size: x-large;
 }
 
-#valores{
-    padding: 40px 10vw;
-    font-size: x-large;
-    background-color: var(--verde-claro);
-    color: white;
+#missao {
+  padding: 40px 10vw;
+  font-size: x-large;
+  text-align: center;
 }
 
-.slider-container:nth-child(1){
-    background-color: var(--verde-claro);
+#valores {
+  padding: 40px 10vw;
+  font-size: x-large;
+  background-color: var(--verde-claro);
+  color: white;
 }
 
-.valores-container{
-    margin: auto;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin-bottom: 30px;
+.slider-container:nth-child(1) {
+  background-color: var(--verde-claro);
 }
 
-.card-valores{
-    text-align: center;
-    width: 300px;
-    height: 300px;
-    margin: auto;
-    margin-bottom: 30px;;
-}
-.card-valores img{
-    border-radius: 50%;
-    overflow: hidden;
-    width: 250px;
-    height: 250px;
-    margin: 15px auto;
-
+.valores-container {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
 }
 
-.card-valores p{
-    margin-top: -10px;
-    font-weight: bold;
-    font-size: 20px;
+.card-valores {
+  text-align: center;
+  width: 300px;
+  height: 300px;
+  margin: auto;
+  margin-bottom: 30px;
+}
+.card-valores img {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 250px;
+  height: 250px;
+  margin: 15px auto;
+}
+
+.card-valores p {
+  margin-top: -10px;
+  font-weight: bold;
+  font-size: 20px;
 }

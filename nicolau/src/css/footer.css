@@ -1,45 +1,45 @@
-:root{
-    --verde-claro: #006741;
-    --verde-escuro: #00442a;
-    --off-white: #ededed
+:root {
+  --verde-claro: #006741;
+  --verde-escuro: #00442a;
+  --off-white: #ededed;
 }
 
-.main-footer{
-    background-color: var(--verde-escuro);
-    min-height: 100px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: white;
+.main-footer {
+  background-color: var(--verde-escuro);
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
 }
-.footer-logo{
-    width: 100px;
+.footer-logo {
+  width: 100px;
 }
 address {
-    margin: auto;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 30px;
-    width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 30px;
+  width: 100%;
 }
 
-.address-item{
-    display: block;
-    padding: 0 20px;
-    margin: 5px;
-    width: 300px;
-    text-align: center;
+.address-item {
+  display: block;
+  padding: 0 20px;
+  margin: 5px;
+  width: 300px;
+  text-align: center;
 }
 
-.address-title{
-    display: block;
-    font-size: 18px;
-    font-weight: bold;
+.address-title {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
 }
 
-.main-footer p{
-    text-align: center;
-    margin: 0 20px 30px 20px;
+.main-footer p {
+  text-align: center;
+  margin: 0 20px 30px 20px;
 }
