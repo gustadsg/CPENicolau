@@ -19,6 +19,9 @@ export default function Navbar(props) {
         <button  className=" btn btn-danger" onClick={handleClick}>Sair</button>
     );
   }
+  else{
+    logout = (<Link to='/login' className=" btn btn-success" onClick={handleClick} style={{backgroundColor: '#00442a'}}>Entrar</Link>)
+  }
   return (
     <>
       <nav className="navbar navbar-dark">

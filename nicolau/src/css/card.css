@@ -12,6 +12,7 @@
   margin-bottom: 30px;
   width: 24rem;
   max-width: 24rem;
+  position: relative;
 }
 
 .card:hover {
