@@ -71,9 +71,10 @@ p {
   height: 300px;
   margin: auto;
   margin-bottom: 30px;
+  /* color: black; */
 }
 .card-valores img {
-  border-radius: 50%;
+  /* border-radius: 50%;   */
   overflow: hidden;
   width: 250px;
   height: 250px;

@@ -11,9 +11,9 @@ export default function Base(props) {
   }
   return (
     <>
-      <Navbar logout={logout}/>
+      <Navbar />
       {props.children}
-      <Footer />
+      <Footer logout={logout} />
     </>
   );
 }

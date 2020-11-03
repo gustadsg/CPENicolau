@@ -43,3 +43,15 @@ address {
   text-align: center;
   margin: 0 20px 30px 20px;
 }
+
+.login{
+  text-decoration: none;
+  color: white;
+  color: rgba(255,255,255, 0.5);
+
+  /* opacity: 0; */
+}
+.login:hover{
+  text-decoration: none;
+  color: white;
+}

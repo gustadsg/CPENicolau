@@ -56,26 +56,28 @@ export default function Home() {
       <section id="valores">
         <h2>Nossos Valores</h2>
         <div className="valores-container">
-          {/* <Slider > */}
+
           <article className="card-valores">
-            <img src={require("../../assets/garra.jpg")} alt="" />
+            <img src={require("../../assets/dedicacao.png")} alt="" />
+            <p>Dedicação</p>
+          </article>
+
+          <article className="card-valores">
+            <img src={require("../../assets/garra.png")} alt="" />
             <p>Garra todo dia</p>
           </article>
-
+          
           <article className="card-valores">
-            <img src={require("../../assets/empathy.webp")} alt="" />
-            <p>Empatia</p>
-          </article>
-
-          <article className="card-valores">
-            <img src={require("../../assets/respect.jpeg")} alt="" />
+            <img src={require("../../assets/respeito.png")} alt="" />
             <p>Respeito</p>
           </article>
 
           <article className="card-valores">
-            <img src={require("../../assets/dedication.jpg")} alt="" />
-            <p>Dedicação</p>
+            <img src={require("../../assets/empatia.png")} alt="" />
+            <p>Empatia</p>
           </article>
+
+
           {/* </Slider>    */}
         </div>
       </section>

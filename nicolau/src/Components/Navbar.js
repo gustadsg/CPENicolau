@@ -1,27 +1,10 @@
-import React, {useContext} from "react";
+import React from "react";
 import "../css/bootstrap.min.css";
 import "../css/navbar.css";
 import logo from "../assets/Logo Nicolau.png";
-import { Link  } from "react-router-dom";
-import StoreContext from './Store/Context';
-
+import { Link } from "react-router-dom";
 
 export default function Navbar(props) {
-
-  const { setToken } = useContext(StoreContext);
-
-  function handleClick(){
-    setToken(null)
-  }
-
-  if (props.logout === true) {
-    var logout = (
-        <button  className=" btn btn-danger" onClick={handleClick}>Sair</button>
-    );
-  }
-  else{
-    logout = (<Link to='/login' className=" btn btn-success" onClick={handleClick} style={{backgroundColor: '#00442a'}}>Entrar</Link>)
-  }
   return (
     <>
       <nav className="navbar navbar-dark">
@@ -41,8 +24,6 @@ export default function Navbar(props) {
             </Link>
           </li>
         </ul>
-
-        {logout}
       </nav>
     </>
   );
