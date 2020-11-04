@@ -9,6 +9,31 @@ function Home() {
     console.log(event.target);
     alert("Formulário de adoção enviado com sucesso!");
   }
+
+  function mascaraCpf(){
+    var inputCpf = document.getElementsByName('cpf')[0]
+
+    if(inputCpf.value.length == 3 || inputCpf.value.length == 7){
+      inputCpf.value += '.'
+    }
+    if(inputCpf.value.length == 11){
+      inputCpf.value += '-'
+    }
+  }
+
+  function mascaraTelefone(){
+    var inputCpf = document.getElementsByName('telefone')[0]
+    if(inputCpf.value.length == 0){
+      inputCpf.value += '('
+    }
+    if(inputCpf.value.length == 3){
+      inputCpf.value += ') '
+    }
+    if(inputCpf.value.length == 10){
+      inputCpf.value += '-'
+    }
+  }
+
   return (
     <Base>
       <div className="formscontainer">
@@ -25,22 +50,30 @@ function Home() {
               type="text"
               placeholder="Nome"
               className="col-12 col-sm-12"
+              required
+              autoFocus
             />
           </Form.Group>
           <Form.Group>
             <Form.Control
+              onKeyUp={mascaraCpf}
               name="cpf"
               type="text"
               placeholder="CPF"
               className="col-12 col-sm-12"
+              maxLength='14'
+              required
             />
           </Form.Group>
           <Form.Group>
             <Form.Control
+              onKeyUp={mascaraTelefone}
+              onClick={()=> document.getElementsByName('telefone')[0].value == 0 ? document.getElementsByName('telefone')[0].value='(' : true}
               name="telefone"
               type="phone"
               placeholder="Telefone"
               className="col-12 col-sm-12"
+              required
             />
           </Form.Group>
           <Form.Group controlId="formBasicEmail">
@@ -49,6 +82,7 @@ function Home() {
               type="email"
               placeholder="E-mail"
               className="col-12 col-sm-12"
+              required
             />
           </Form.Group>
           <Form.Group classname="espacamento1" style={{ marginBottom: "0px" }}>
@@ -111,7 +145,6 @@ function Home() {
             <button
               type="submit"
               className="btn btn-outline-success cadastro col-12"
-              autoFocus
             >
               Cadastro
             </button>

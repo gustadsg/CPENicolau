@@ -96,6 +96,16 @@ export default function Adote() {
             é bem calma e adora brinquedos fofinhos! Tem porte pequeno, pesa
             5kg, está saudável e vacinada.
           </Card>
+          <Card name="Mili" race="Gato" gender="Fêmea" age="13">
+            Ela foi resgatada e já chegou no Nicolau desanimada, sem esperanças
+            de um futuro próspero, com muito petisquinho para ela, porque ela
+            veio da rua e nunca teve muita fartura.Sentimos que ela desenvolveu
+            depressão e várias outras doenças porque ela vive deitada e não
+            gosta de afeto, constantemente ela arranha quem tenta chegar perto.
+            Ela deve ter passado maus momentos para odiar tanto humanos. Por
+            isso ela deve ser adotada, para que ela desperte o apego e que volte
+            a ser feliz
+          </Card>
         </div>
       </Base>
     </>
