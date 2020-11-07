@@ -45,7 +45,7 @@ function Home() {
           <Form.Group onSubmit={handleSubmit}>
             {" "}
             {/*form.group é utilizado para espaçar as caixaas de texto*/}
-            <Form.Control
+            <Form.Control 
               name="nome"
               type="text"
               placeholder="Nome"
