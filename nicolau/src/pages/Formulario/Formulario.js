@@ -13,23 +13,23 @@ function Home() {
   function mascaraCpf(){
     var inputCpf = document.getElementsByName('cpf')[0]
 
-    if(inputCpf.value.length == 3 || inputCpf.value.length == 7){
+    if(inputCpf.value.length === 3 || inputCpf.value.length === 7){
       inputCpf.value += '.'
     }
-    if(inputCpf.value.length == 11){
+    if(inputCpf.value.length === 11){
       inputCpf.value += '-'
     }
   }
 
   function mascaraTelefone(){
     var inputCpf = document.getElementsByName('telefone')[0]
-    if(inputCpf.value.length == 0){
+    if(inputCpf.value.length === 0){
       inputCpf.value += '('
     }
-    if(inputCpf.value.length == 3){
+    if(inputCpf.value.length === 3){
       inputCpf.value += ') '
     }
-    if(inputCpf.value.length == 10){
+    if(inputCpf.value.length === 10){
       inputCpf.value += '-'
     }
   }
@@ -68,11 +68,12 @@ function Home() {
           <Form.Group>
             <Form.Control
               onKeyUp={mascaraTelefone}
-              onClick={()=> document.getElementsByName('telefone')[0].value == 0 ? document.getElementsByName('telefone')[0].value='(' : true}
+              onClick={()=> document.getElementsByName('telefone')[0].value === 0 ? document.getElementsByName('telefone')[0].value='(' : true}
               name="telefone"
               type="phone"
               placeholder="Telefone"
               className="col-12 col-sm-12"
+              maxLength='15'
               required
             />
           </Form.Group>
