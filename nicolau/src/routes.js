@@ -6,7 +6,8 @@ import Home from "./pages/Home";
 import Adote from "./pages/Adote";
 import Administrador from "./pages/Administrador";
 import Login from "./pages/Login/Login.jsx";
-import UserCrud from './pages/Administrador/UserCrud';
+import UserCrud from './pages/Formulario/UserCrud';
+import Aprovados from './pages/Administrador/Aprovados';
 
 function Routes() {
   return (
@@ -18,6 +19,7 @@ function Routes() {
           <Route path="/Formulario" component={UserCrud} />
           <RoutesPrivate path="/Administrador" component={Administrador} />
           <Route path="/Login" component={Login} />
+          <RoutesPrivate path="/Aprovados" component={Aprovados} />
           {/* <Route path='/users' component={UserCrud}/> */}
         </Switch>
       </StoreProvider>

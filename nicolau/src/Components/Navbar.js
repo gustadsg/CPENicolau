@@ -5,6 +5,42 @@ import logo from "../assets/Logo Nicolau.png";
 import { Link } from "react-router-dom";
 
 export default function Navbar(props) {
+  var adote;
+  var link;
+
+  if (props.adm == 'true') {
+
+    link = (
+        <li className="nav-item">
+        <Link className="nav-link" to="/Aprovados">
+          Aprovados
+        </Link>
+      </li>
+    );
+  }else{
+      link = (
+        <li className="nav-item">
+        <Link className="nav-link" to="/Administrador">
+        Administrador
+        </Link>
+      </li>
+      )
+  }
+
+//   render or not adote button
+  if (props.logout === true) {
+    adote = "";
+  } else {
+    adote = (
+    <li className="nav-item">
+        <Link className="nav-link" to="/Adote">
+        Adote
+        </Link>
+    </li>)
+    link = ''
+  }
+
+
   return (
     <>
       <nav className="navbar navbar-dark">
@@ -18,11 +54,8 @@ export default function Navbar(props) {
               Home
             </Link>
           </li>
-          <li className="nav-item active adote-btn">
-            <Link className="nav-link " to="/Adote">
-              Adote <span class="sr-only">(current)</span>
-            </Link>
-          </li>
+          {adote}
+          {link}
         </ul>
       </nav>
     </>

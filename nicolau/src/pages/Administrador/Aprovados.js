@@ -5,9 +5,9 @@ import "../../css/administrador.css";
 
 export default function Admnistrador() {
   return (
-    <Base logout='true' adm='true'>
+    <Base logout='true' adm='false'>
       <div className="container-flex">
-        <Candidat pagina="users" botoes="true"/>
+        <Candidat pagina="aprovados" botoes="false"/>
        
       </div>
     </Base>

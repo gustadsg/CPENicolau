@@ -11,9 +11,11 @@ export default function Base(props) {
   }
   return (
     <>
-      <Navbar />
+      <Navbar 
+        logout={logout} adm={props.adm}/>
       {props.children}
-      <Footer logout={logout} />
+      <Footer 
+        logout={logout} />
     </>
   );
 }
