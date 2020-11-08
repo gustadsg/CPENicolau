@@ -43,11 +43,6 @@ export default function DadosDoCandidat(props) {
         
     };
 
-    if (props.pagina === "users") {
-        console.log(props.pagina)
-
-    }
-
     useEffect(() => {
         api.get(props.pagina).then(res => {
             setCandidato(res.data)
@@ -55,18 +50,6 @@ export default function DadosDoCandidat(props) {
     }, [])
 
 
-    function handleConfirm() {
-        console.log(props.pagina);
-    }
-
-    // save() {
-
-    //     const url = user.id ? `${baseUrl}/${user.id}` : baseUrl
-    //     axios["put"](url, user)
-    //         .then(resp => {
-    //             const list = this.getUpdatedList(resp.data)
-    //         })
-    // }
 
     const handleAprova = (aprov) => {
         const values = [...candi];

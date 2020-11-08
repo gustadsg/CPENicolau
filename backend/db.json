@@ -98,5 +98,28 @@
       "numero": "asdasd",
       "id": 6
     }
+  ],
+  "animais":[
+    {
+      "nome": "Alaska",
+      "especie": "Gato",
+      "sexo": "Femea",
+      "idade": "13",
+      "descrição": "bla"
+    },
+    {
+      "nome": "Alaska",
+      "especie": "Gato",
+      "sexo": "Femea",
+      "idade": "13",
+      "descrição": "bla"
+    },
+    {
+      "nome": "Alaska",
+      "especie": "Gato",
+      "sexo": "Femea",
+      "idade": "13",
+      "descrição": "bla"
+    }
   ]
 }
