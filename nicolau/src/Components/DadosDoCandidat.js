@@ -1,26 +1,14 @@
-import React, {useEffect, useReducer, useState} from "react";
+import React, {useEffect, useState} from "react";
 import "../css/bootstrap.min.css";
 import "../css/candidat.css";
 import api from "../services/api";
 
 export default function DadosDoCandidat(props) {
     const [candi, setCandidato] = useState([])
-    var user = {
-        nome: props.nome,
-        cpf: props.cpf,
-        telefone: props.telefone,
-        email: props.email,
-        estado: props.estado,
-        cidade: props.cidade,
-        bairro: props.bairro,
-        rua: props.rua,
-        numero: props.numero,
-        animal: props.animal
-    }
+    
     var propriedades = props
     function botoes(aprov) {
-        if (propriedades.botoes == "true") {
-            console.log(propriedades.botoes)
+        if (propriedades.botoes === "true") {
             return (
                 <div className="buttons">
                     <button type="button" className="btn btn-danger"
@@ -49,27 +37,46 @@ export default function DadosDoCandidat(props) {
         })
     }, [])
 
-
+    const findAndDeleteAnimal = (nome)=>{
+        api.get("animais")
+        .then(animais=>{
+            animais.data.map((animal)=>{
+                if(animal.nome === nome){
+                    api.delete(`/animais/${animal.id}`)
+                    console.log(animal.id)
+                }
+            })
+        })
+    }
 
     const handleAprova = (aprov) => {
         const values = [...candi];
         values.splice(`${
             aprov.id
         }`, 1);
-        setCandidato(values);
-        api.delete(`users/${
-            aprov.id
-        }`)
-        api.post(`aprovados`, aprov)
-        window.location.reload()
+        setCandidato(values)
+        api.delete(`users/${aprov.id}`)
+        delete aprov.id
+        api.post(`aprovados`, aprov).then(()=>{
+            setTimeout(() => {
+                window.location.reload()
+            }, 100);
+        })
+        const nomeAnimal = aprov.animal
+        findAndDeleteAnimal(nomeAnimal) 
     }
 
     const handleRemove = (id) => {
         const values = [...candi];
         values.splice(`${id}`, 1);
         setCandidato(values);
-        api.delete(`users/${id}`)
-        window.location.reload()
+        api.delete(`users/${id}`).then(()=>{
+            setTimeout(() => {
+                window.location.reload()
+            }, 100);
+        })
+        
+        // window.location.reload()
     }
 
     return(

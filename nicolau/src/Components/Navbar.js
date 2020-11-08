@@ -5,10 +5,10 @@ import logo from "../assets/Logo Nicolau.png";
 import { Link } from "react-router-dom";
 
 export default function Navbar(props) {
-  var adote;
-  var link;
+  var adote='';
+  var link='';
 
-  if (props.adm == 'true') {
+  if (props.adm === 'true') {
 
     link = (
         <li className="nav-item">

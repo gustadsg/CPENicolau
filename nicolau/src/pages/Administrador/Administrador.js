@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Base from "../../Components/Base";
 import Candidat from "../../Components/Candidat";
 import "../../css/administrador.css";

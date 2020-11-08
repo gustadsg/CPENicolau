@@ -13,32 +13,35 @@ const initialState ={
 }
 
 function handleSubmit(event) {
+  let inputs = document.querySelectorAll('input')
     event.preventDefault();
-    console.log(event.target);
-    alert("Formulário de adoção enviado com sucesso!");
+    inputs.forEach(input => {
+      input.value = ''
+    });
+    alert("Formulário de adoção enviado com sucesso! A resposta chegará em seu e-mail.");
 }
 
 function mascaraCpf(){
   var inputCpf = document.getElementsByName('cpf')[0]
 
-  if(inputCpf.value.length == 3 || inputCpf.value.length == 7){
+  if(inputCpf.value.length === 3 || inputCpf.value.length === 7){
     inputCpf.value += '.'
   }
-  if(inputCpf.value.length == 11){
+  if(inputCpf.value.length === 11){
     inputCpf.value += '-'
   }
 }
 
 function mascaraTelefone(){
-  var inputCpf = document.getElementsByName('telefone')[0]
-  if(inputCpf.value.length == 0){
-    inputCpf.value += '('
+  var inputTelefone = document.getElementsByName('telefone')[0]
+  if(inputTelefone.value.length === 0){
+    inputTelefone.value += '('
   }
-  if(inputCpf.value.length == 3){
-    inputCpf.value += ') '
+  if(inputTelefone.value.length === 3){
+    inputTelefone.value += ') '
   }
-  if(inputCpf.value.length == 10){
-    inputCpf.value += '-'
+  if(inputTelefone.value.length === 10){
+    inputTelefone.value += '-'
   }
 }
 
@@ -96,6 +99,7 @@ export default class UserCrud extends Component {
           <Form.Group>
           <input type="text" className="form-control"
                 onKeyUp={mascaraCpf}
+                maxLength="14"
                 name = "cpf"
                 value = {this.state.cpf}
                 onChange={e => this.updateField(e)}
@@ -106,15 +110,17 @@ export default class UserCrud extends Component {
           <Form.Group>
           <input type="text" className="form-control"
                 onKeyUp={mascaraTelefone}
+                maxLength="15"
                 name = "telefone"
                 value = {this.state.telefone}
+                onClick={mascaraTelefone}
                 onChange={e => this.updateField(e)}
                 required
                 autoFocus
                 placeholder = "Telefone" />
           </Form.Group>
           <Form.Group controlId="formBasicEmail">
-          <input type="text" className="form-control"
+          <input type="email" className="form-control"
                 name = "email"
                 value = {this.state.email}
                 onChange={e => this.updateField(e)}
@@ -174,7 +180,7 @@ export default class UserCrud extends Component {
               </div>
               <div class="col-12 col-sm-4">
                 <Form.Group>
-                <input type="text" className="form-control"
+                <input type="number" className="form-control"
                     name = "numero"
                     value = {this.state.numero}
                     onChange={e => this.updateField(e)}

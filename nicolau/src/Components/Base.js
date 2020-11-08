@@ -3,7 +3,7 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 
 export default function Base(props) {
-  let logout;
+  let logout='';
   if (props.logout === 'true'){
     logout = true
   } else{

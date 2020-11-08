@@ -20,7 +20,7 @@ function Routes() {
           <RoutesPrivate path="/Administrador" component={Administrador} />
           <Route path="/Login" component={Login} />
           <RoutesPrivate path="/Aprovados" component={Aprovados} />
-          {/* <Route path='/users' component={UserCrud}/> */}
+
         </Switch>
       </StoreProvider>
     </BrowserRouter>

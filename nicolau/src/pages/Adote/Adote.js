@@ -1,14 +1,23 @@
-import React from "react";
+import React, {useState} from "react";
 import Base from "../../Components/Base";
 import Card from "../../Components/Card";
 import "../../css/Adote.css";
+import api from '../../services/api'
 
 export default function Adote() {
-  return (
+  var [animals, setAnimals] = useState([])
+    function getData(){
+        return api.get("http://localhost:3001/animais").then(response=>response.data).then(response=>setAnimals(response))
+    }
+    getData()
+    const animalsList = animals.map(animal => <Card style={{maxWidth: "300px"}} name={animal.nome} race={animal.especie} gender={animal.sexo} age={animal.idade}>{animal.descricao}</Card>)
+
+    return (
     <>
       <Base>
         <div className="cards-container">
-          <Card name="Alaska" race="Gato" gender="Fêmea" age="15">
+          {animalsList}
+          {/* <Card name="Alaska" race="Gato" gender="Fêmea" age="15">
             A Alaska é uma gata que foi resgatada em Junho de 2020. Ela pesa 5
             kg, tem sua vacinação em dia e está completamente saudável! É
             carinhosa, companheira e carente. Adora carinho atrás da orelha e de
@@ -105,7 +114,7 @@ export default function Adote() {
             Ela deve ter passado maus momentos para odiar tanto humanos. Por
             isso ela deve ser adotada, para que ela desperte o apego e que volte
             a ser feliz
-          </Card>
+          </Card> */}
         </div>
       </Base>
     </>

@@ -1,125 +1,110 @@
 {
-  "users": [
+  "users": [],
+  "aprovados": [],
+  "animais": [
     {
-      "nome": "asdad",
-      "cpf": "dasdas",
-      "telefone": "dasdasd",
-      "email": "asdasd",
-      "estado": "adsada",
-      "cidade": "dasdd",
-      "bairro": "asdasd",
-      "rua": "asdasd",
-      "numero": "asdasd",
-      "id": 3
-    },
-    {
-      "nome": "bruno",
-      "cpf": "asdasdasd",
-      "telefone": "dasdasd",
-      "email": "asdasda",
-      "estado": "asdasd",
-      "cidade": "asdasd",
-      "bairro": "asdasd",
-      "rua": "asdas",
-      "numero": "asdas",
-      "id": 5
-    },
-    {
-      "nome": "aaa",
-      "cpf": "14222726648",
-      "telefone": "asdasd",
-      "email": "asdasd",
-      "estado": "asdasd",
-      "cidade": "dasdd",
-      "bairro": "asdasd",
-      "rua": "asdasd",
-      "numero": "asdasd",
-      "id": 7
-    },
-    {
-      "nome": "a",
-      "cpf": "s",
-      "telefone": "d",
-      "email": "f",
-      "estado": "g",
-      "cidade": "d",
-      "bairro": "s",
-      "rua": "s",
-      "numero": "s",
-      "id": 8
-    }
-  ],
-  "aprovados": [
-    {
-      "nome": "Alfredo",
-      "cpf": "121.545.412-22",
-      "telefone": "9) 95151212",
-      "email": "moraisjp@ufmg.br",
-      "estado": "asdasd",
-      "cidade": "asdasd",
-      "bairro": "asdasd",
-      "rua": "asdasd",
-      "numero": "242",
-      "id": 1
-    },
-    {
-      "nome": "Lucas",
-      "cpf": "121.545.412-22",
-      "telefone": "9) 95151212",
-      "email": "moraisjp@ufmg.br",
-      "estado": "asdasd",
-      "cidade": "asdasd",
-      "bairro": "asdasd",
-      "rua": "asdasd",
-      "numero": "242",
-      "id": 10
+      "id": 1,
+      "nome": "Alaska",
+      "especie": "Gato",
+      "sexo": "Fêmea",
+      "idade": "15",
+      "descricao": "A Alaska é uma gata que foi resgatada em Junho de 2020. Ela pesa 5 kg, tem sua vacinação em dia e está completamente saudável! É carinhosa, companheira e carente. Adora carinho atrás da orelha e de leituras leves aos domingos. Especialmente fanfics."
     },
     {
       "id": 2,
-      "nome": "Victor Costa",
-      "cpf": "000.000.00-02",
-      "telefone": "(10) 98765-4331",
-      "email": "vcosta@gmail.com",
-      "estado": "minas gerais",
-      "cidade": "new lime",
-      "bairro": "aquele ",
-      "rua": "qualquer uma",
-      "numero": "250"
+      "nome": "Anaya",
+      "especie": "Cachorro",
+      "sexo": "Fêmea",
+      "idade": "24",
+      "descricao": "A Anaya é uma cachorrinha que deu luz a 4 filhotes em Setembro. Todos eles foram adotados, mas ela ainda precisa de um lar! Ela é muito dócil, está 100% saudável, e, devido ao pós-parto, precisa se exercitar todos os dias. Gosta de praticar ioga e outros esportes."
     },
     {
-      "nome": "matheus",
-      "cpf": "dsa.ddasd",
-      "telefone": "asd) as",
-      "email": "asdsad",
-      "estado": "dasd",
-      "cidade": "asdasd",
-      "bairro": "asd",
-      "rua": "asdas",
-      "numero": "asdasd",
-      "id": 6
-    }
-  ],
-  "animais":[
-    {
-      "nome": "Alaska",
+      "id": 3,
+      "nome": "Floquinho",
       "especie": "Gato",
-      "sexo": "Femea",
-      "idade": "13",
-      "descrição": "bla"
+      "sexo": "Macho",
+      "idade": "28",
+      "descricao": "A história de Floquinho é bem complicada. A sua dona bateu na nossa porta em meados de Setembro, pedindo ajuda para encontrar uma família para ele. Infelizmente, não podia mantê-lo em sua casa pois seu filho chorava toda vez que o via, acreditando tratar-se de um alienígena malvado. Muito pelo contrário, Floquinho é um gato extremamente dócil e adora colo. Exceto quando está tramando dominar o mundo com sua fofura."
     },
     {
-      "nome": "Alaska",
+      "id": 4,
+      "nome": "Scooby",
       "especie": "Gato",
-      "sexo": "Femea",
-      "idade": "13",
-      "descrição": "bla"
+      "sexo": "Macho",
+      "idade": "6",
+      "descricao": "O Scooby chegou no Nicolau com algumas feridas superficiais e com a patinha machucada. O levamos para o veterinário, tratamos sua patinha e as feridas curaram com o tempo. Já foi vacinado e castrado! É um cachorro muito brincalhão e um ótimo caçador. É fascinado com petiscos e bolinhas, mas se assusta facilmente e não gosta de barulhos altos."
     },
     {
-      "nome": "Alaska",
-      "especie": "Gato",
-      "sexo": "Femea",
+      "id": 5,
+      "nome": "Leia",
+      "especie": "Cachorro",
+      "sexo": "Fêmea",
       "idade": "13",
-      "descrição": "bla"
+      "descricao": "A Leia foi resgatada em Setembro de 2019. É uma cadelinha muito sapeca e ativa! Se dá muito bem com os outros cachorros mas é facilmente influenciada por cães de má índole. Tem porte médio, já foi vacinada e está com a saúde em dia. Adora carinho na barriga e tem uma pancinha linda!"
+    },
+    {
+      "id": 6,
+      "nome": "Biju",
+      "especie": "Cachorro",
+      "sexo": "Fêmea",
+      "idade": "30",
+      "descricao": "A Biju foi resgatada em maio de 2018. Ela é levemente temperamental, gosta de dormir com o corpo todo debaixo da coberta (super friorenta) e muito brincalhona. Tem porte médio, já foi castrada e vacinada! A Biju é extremamente carinhosa, adora colo, calor humano e carinho atrás da orelha. Tem um fraco por patinhos de pelúcia."
+    },
+    {
+      "id": 7,
+      "nome": "Lua",
+      "especie": "Cachorro",
+      "sexo": "Fêmea",
+      "idade": "38",
+      "descricao": "A Lua é uma cadelinha levemente traumatizada por seu tempo de rua. Não gosta de barulhos altos e assusta facilmente com movimentos bruscos. É fascinada com Harry Potter e é da casa Grifinória. Tem porte pequeno, já foi castrada e está com vacinação em dia."
+    },
+    {
+      "id": 8,
+      "nome": "Pancho Lucio",
+      "especie": "Cachorro",
+      "sexo": "Macho",
+      "idade": "12",
+      "descricao": "O Pancho Lúcio foi resgatado em maio, após quase ser atropelado por um de nossos voluntários. É um cachorro levemente preguiçoso, tem facilidade de cochilar em locais inesperados, é extremamente dócil e adora colo e carinho na barriga. Nunca briga com outros cachorros e sempre adota uma postura passiva durante conflitos. Tem porte pequeno, está 100% saudável e com a vacinação em dia."
+    },
+    {
+      "id": 9,
+      "nome": "Loba",
+      "especie": "Cachorro",
+      "sexo": "Fêmea",
+      "idade": "18",
+      "descricao": "A Loba é uma cadela extremamente calma, companheira e fiel. Gosta de brincar ao ar livre e se dá muito bem com outros cães! Tem porte médio, está saudável e com a vacinação em dia. Gosta de brincar com garrafas pet e de destruir jardins floridos."
+    },
+    {
+      "id": 10,
+      "nome": "Bono Vox e Kitty Kat",
+      "especie": "Cachorro",
+      "sexo": "Fêmea",
+      "idade": "12",
+      "descricao": "Os gêmeos Bono Vox e Kitty Kat são inseparáveis. São bem quietinhos e obedientes. Adoram carinho na barriga e petiscos de frango. Provavelmente não vão proteger sua casa de um assalto, mas nuncaconhecerão nenhuma dupla mais companheira e fiel. Estão saudáveis,fortes, e pesam aproximadamente 45 kg. Os dois têm distúrbio deimagem, então não é saudável mencionar o peso na frente deles."
+    },
+    {
+      "id": 11,
+      "nome": "Mili",
+      "especie": "Gato",
+      "sexo": "Fêmea",
+      "idade": "13",
+      "descricao": "Ela foi resgatada e já chegou no Nicolau desanimada, sem esperanças de um futuro próspero, com muito petisquinho para ela, porque ela veio da rua e nunca teve muita fartura.Sentimos que ela desenvolveu depressão e várias outras doenças porque ela vive deitada e não gosta de afeto, constantemente ela arranha quem tenta chegar perto. Ela deve ter passado maus momentos para odiar tanto humanos. Por isso ela deve ser adotada, para que ela desperte o apego e que volte a ser feliz."
+    },
+    {
+      "id": 12,
+      "nome": "Tori",
+      "especie": "Cachorro",
+      "sexo": "Fêmea",
+      "idade": "8",
+      "descricao": "A Tori é uma cadela extremamente brincalhona. Ainda é filhote, então é muito ativa e elétrica. Adora brincar ao ar livre e de companhia durante as brincadeiras. Ela já foi vacinada e castrada, tem porte médio e estima-se que não deve crescer muito. Cuidado com chinelos largados sem supervisão."
+    },
+    {
+      "id": 13,
+      "nome": "Dorothy",
+      "especie": "Cachorro",
+      "sexo": "Fêmea",
+      "idade": "15",
+      "descricao": "A Dorothy é uma cadela extremamente esperta e ativa. Gosta de colo, é bem calma e adora brinquedos fofinhos! Tem porte pequeno, pesa 5kg, está saudável e vacinada."
     }
   ]
 }
