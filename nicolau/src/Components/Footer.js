@@ -1,24 +1,29 @@
-import React, {useContext} from "react";
-import {Link} from 'react-router-dom'
+import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 import "../css/bootstrap.min.css";
 import "../css/footer.css";
-import StoreContext from './Store/Context';
-import logoescura from "../assets/Logo Nicolau Verde escuro.png";
+import StoreContext from "./Store/Context";
+import logoescura from "../assets/Logo Nicolau SF.png";
 
 export default function Footer(props) {
   const { setToken } = useContext(StoreContext);
 
-  function handleClick(){
-    setToken(null)
+  function handleClick() {
+    setToken(null);
   }
 
   if (props.logout === true) {
     var logout = (
-        <Link className='login' onClick={handleClick}>Sair</Link>
+      <Link className="login" onClick={handleClick}>
+        Sair
+      </Link>
     );
-  }
-  else{
-    logout = (<Link className='login' to='/login'>Entrar</Link>)
+  } else {
+    logout = (
+      <Link className="login" to="/administrador">
+        Entrar
+      </Link>
+    );
   }
   return (
     <footer className="main-footer">
@@ -26,15 +31,17 @@ export default function Footer(props) {
       <address>
         <div className="address-item">
           <span className="address-title">Endereço</span>
-          <p>rua dos bobs, numero 0</p>
+          <p>
+            Avenida Presidente Antônio Carlos, 6627, Pampulha, Belo Horizonte
+          </p>
         </div>
         <div className="address-item">
           <span className="address-title">Telefone</span>
-          <p>4002-8922</p>
+          <p>0800 000 000</p>
         </div>
         <div className="address-item">
           <span className="address-title">E-mail</span>
-          <p>umemailqualquer@email.com</p>
+          <p>contato@nicolau.com</p>
         </div>
       </address>
       {logout}

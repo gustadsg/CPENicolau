@@ -1,45 +1,44 @@
 import React from "react";
 import "../css/bootstrap.min.css";
 import "../css/navbar.css";
-import logo from "../assets/Logo Nicolau.png";
+import logo from "../assets/Logo Nicolau SF.png";
 import { Link } from "react-router-dom";
 
 export default function Navbar(props) {
-  var adote='';
-  var link='';
+  var adote = "";
+  var link = "";
 
-  if (props.adm === 'true') {
-
+  if (props.adm === "true") {
     link = (
-        <li className="nav-item">
+      <li className="nav-item">
         <Link className="nav-link" to="/Aprovados">
           Aprovados
         </Link>
       </li>
     );
-  }else{
-      link = (
-        <li className="nav-item">
+  } else {
+    link = (
+      <li className="nav-item">
         <Link className="nav-link" to="/Administrador">
-        Administrador
+          Administrador
         </Link>
       </li>
-      )
+    );
   }
 
-//   render or not adote button
+  //   render or not adote button
   if (props.logout === true) {
     adote = "";
   } else {
     adote = (
-    <li className="nav-item">
+      <li className="nav-item">
         <Link className="nav-link" to="/Adote">
-        Adote
+          Adote
         </Link>
-    </li>)
-    link = ''
+      </li>
+    );
+    link = "";
   }
-
 
   return (
     <>
