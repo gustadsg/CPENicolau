@@ -25,6 +25,14 @@
       "descricao": "A Alaska é uma gata que foi resgatada em Junho de 2020. Ela pesa 5 kg, tem sua vacinação em dia e está completamente saudável! É carinhosa, companheira e carente. Adora carinho atrás da orelha e de leituras leves aos domingos. Especialmente fanfics."
     },
     {
+      "id": 2,
+      "nome": "Anaya",
+      "especie": "Cachorro",
+      "sexo": "Fêmea",
+      "idade": "24",
+      "descricao": "A Anaya é uma cachorrinha que deu luz a 4 filhotes em Setembro. Todos eles foram adotados, mas ela ainda precisa de um lar! Ela é muito dócil, está 100% saudável, e, devido ao pós-parto, precisa se exercitar todos os dias. Gosta de praticar ioga e outros esportes."
+    },
+    {
       "id": 3,
       "nome": "Floquinho",
       "especie": "Gato",
