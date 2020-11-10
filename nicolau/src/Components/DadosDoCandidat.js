@@ -35,14 +35,13 @@ export default function DadosDoCandidat(props) {
     api.get(props.pagina).then((res) => {
       setCandidato(res.data);
     });
-  }, []);
+  });
 
   const findAndDeleteAnimal = (nome) => {
     api.get("animais").then((animais) => {
       animais.data.map((animal) => {
         if (animal.nome === nome) {
           api.delete(`/animais/${animal.id}`);
-          console.log(animal.id);
         }
       });
     });

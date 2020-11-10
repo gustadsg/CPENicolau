@@ -16,7 +16,7 @@ function Routes() {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/Adote" component={Adote} />
-          <Route path="/Formulario" component={UserCrud} />
+          <Route path="/Formulario/:id" component={UserCrud} />
           <RoutesPrivate path="/Administrador" component={Administrador} />
           <Route path="/Login" component={Login} />
           <RoutesPrivate path="/Aprovados" component={Aprovados} />

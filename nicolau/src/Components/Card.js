@@ -69,7 +69,7 @@ export default function Card(props) {
 
   return (
     <>
-      <div className="card">
+      <div className={`card ${props.className}`}>
         <img
           src={require("../assets/" + props.name + ".png")}
           className="card-img-top"
@@ -99,7 +99,7 @@ export default function Card(props) {
             </div>
             <Link
               className="btn btn-primary  adoption-btn "
-              to="/Formulario"
+              to={`/Formulario/${props.name}`}
               style={{ backgroundColor: verdeClaro }}
             >
               Adote-me
@@ -137,7 +137,7 @@ export default function Card(props) {
           </button>
           <Link
             className="btn btn-primary btn-lg adoption-btn"
-            to="/Formulario"
+            to={`/Formulario/${props.name}`}
             style={{ backgroundColor: verdeClaro }}
           >
             Adote-me

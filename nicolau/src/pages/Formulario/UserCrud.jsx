@@ -16,10 +16,13 @@ const initialState = {
     bairro: "",
     rua: "",
     numero: "",
-    animal: "",
+    animal: ""
   },
   list: [],
 };
+
+
+
 
 function handleSubmit(event) {
   let inputs = document.querySelectorAll("input");
@@ -65,8 +68,9 @@ export default class UserCrud extends Component {
     });
   }
 
-  save() {
+  save(animal) {
     const user = this.state.user;
+    user.animal = animal
     const method = user.id ? "put" : "post";
     const url = user.id ? `${baseUrl}/${user.id}` : baseUrl;
     axios[method](url, user).then((resp) => {
@@ -86,21 +90,21 @@ export default class UserCrud extends Component {
     user[event.target.name] = event.target.value;
     this.setState({ user });
   }
-
+  
   renderForm() {
+    const animal = this.props.match.params.id
     return (
-      <div className="formscontainer">
-        <h1>Formulário para Adoção</h1>
-        <form className="inputs" onSubmit={handleSubmit}>
+      <div className ="formscontainer">
+        <h1>Formulário para Adoção do(a) {animal}</h1>
+        <form className ="inputs" onSubmit={handleSubmit}>
           {" "}
-          {/*entradas de texto e os botões*/}
-          <Form.Group onSubmit={handleSubmit}>
+          <Form.Group>
             {" "}
-            {/*form.group é utilizado para espaçar as caixaas de texto*/}
             <input
               type="text"
-              className="form-control"
+              className ="form-control"
               name="nome"
+              minLength="3"
               value={this.state.user.name}
               onChange={(e) => this.updateField(e)}
               placeholder="Nome"
@@ -111,137 +115,131 @@ export default class UserCrud extends Component {
           <Form.Group>
             <input
               type="text"
-              className="form-control"
+              className ="form-control"
               onKeyUp={mascaraCpf}
               maxLength="14"
+              minLength="14"
               name="cpf"
               value={this.state.cpf}
               onChange={(e) => this.updateField(e)}
               required
-              autoFocus
               placeholder="CPF"
             />
           </Form.Group>
           <Form.Group>
             <input
               type="text"
-              className="form-control"
+              className ="form-control"
               onKeyUp={mascaraTelefone}
               maxLength="15"
+              minLength="14"
               name="telefone"
               value={this.state.telefone}
               onClick={mascaraTelefone}
               onChange={(e) => this.updateField(e)}
               required
-              autoFocus
               placeholder="Telefone"
             />
           </Form.Group>
           <Form.Group controlId="formBasicEmail">
             <input
               type="email"
-              className="form-control"
+              className ="form-control"
               name="email"
               value={this.state.email}
               onChange={(e) => this.updateField(e)}
               required
-              autoFocus
               placeholder="E-mail"
             />
           </Form.Group>
-          <Form.Group classname="espacamento1" style={{ marginBottom: "0px" }}>
-            <div class="form-row">
-              <div class="col-12 col-sm-6 ">
+          <Form.Group className="espacamento1" style={{ marginBottom: "0px" }}>
+            <div className ="form-row">
+              <div className ="col-12 col-sm-6 ">
                 <Form.Group>
                   <input
                     type="text"
-                    className="form-control"
+                    className ="form-control"
                     name="estado"
                     value={this.state.estado}
                     onChange={(e) => this.updateField(e)}
                     required
-                    autoFocus
                     placeholder="Estado"
                   />
                 </Form.Group>
               </div>
-              <div class="col-12 col-sm-6">
+              <div className ="col-12 col-sm-6">
                 <Form.Group>
                   <input
                     type="text"
-                    className="form-control"
+                    className ="form-control"
                     name="cidade"
                     value={this.state.cidade}
                     onChange={(e) => this.updateField(e)}
                     required
-                    autoFocus
                     placeholder="Cidade"
                   />
                 </Form.Group>
               </div>
             </div>
           </Form.Group>
-          <Form.Group className="espacamento2">
-            <div class="form-row">
-              <div class="col-12 col-sm-4">
+          <Form.Group className ="espacamento2">
+            <div className="form-row">
+              <div className="col-12 col-sm-4">
                 <Form.Group>
                   <input
                     type="text"
-                    className="form-control"
+                    className ="form-control"
                     name="bairro"
                     value={this.state.bairro}
                     onChange={(e) => this.updateField(e)}
                     required
-                    autoFocus
                     placeholder="Bairro"
                   />
                 </Form.Group>
               </div>
-              <div class="col-12 col-sm-4">
+              <div className="col-12 col-sm-4">
                 <Form.Group>
                   <input
                     type="text"
-                    className="form-control"
+                    className ="form-control"
                     name="rua"
                     value={this.state.rua}
                     onChange={(e) => this.updateField(e)}
                     required
-                    autoFocus
                     placeholder="Rua"
                   />
                 </Form.Group>
               </div>
-              <div class="col-12 col-sm-4">
+              <div className="col-12 col-sm-4">
                 <Form.Group>
                   <input
                     type="number"
-                    className="form-control"
+                    className ="form-control"
                     name="numero"
                     value={this.state.numero}
                     onChange={(e) => this.updateField(e)}
-                    required
-                    autoFocus
                     placeholder="Número"
                   />
                 </Form.Group>
               </div>
             </div>
-            <Form.Group>
+            <Form.Group style={{display: "none"}}>
               <input
                 type="text"
-                className="form-control"
+                className ="form-control"
                 name="animal"
-                value={this.state.cpf}
+                value={this.props.match.params.id}
                 onChange={(e) => this.updateField(e)}
                 required
-                autoFocus
                 placeholder="Nome do pet desejado"
               />
             </Form.Group>
             <button
-              onClick={(e) => this.save(e)}
+              onClick={() => {
+                this.save(animal)
+              }}
               type="submit"
-              className="btn btn-outline-success cadastro col-12"
+              className ="btn btn-outline-success cadastro col-12"
             >
               Cadastro
             </button>

@@ -11,9 +11,9 @@ export default function Footer(props) {
   function handleClick() {
     setToken(null);
   }
-
+  var logout ="";
   if (props.logout === true) {
-    var logout = (
+    logout = (
       <Link className="login" onClick={handleClick}>
         Sair
       </Link>

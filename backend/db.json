@@ -1,5 +1,32 @@
 {
-  "users": [],
+  "users": [
+    {
+      "nome": "a",
+      "cpf": "",
+      "telefone": "",
+      "email": "",
+      "estado": "",
+      "cidade": "",
+      "bairro": "",
+      "rua": "",
+      "numero": "",
+      "animal": "Anaya",
+      "id": 1
+    },
+    {
+      "nome": "aaa",
+      "cpf": "aa",
+      "telefone": "",
+      "email": "",
+      "estado": "",
+      "cidade": "",
+      "bairro": "",
+      "rua": "",
+      "numero": "",
+      "animal": "Anaya",
+      "id": 2
+    }
+  ],
   "aprovados": [
     {
       "nome": "Matheus Barroso",
@@ -43,7 +70,7 @@
     {
       "id": 4,
       "nome": "Scooby",
-      "especie": "Gato",
+      "especie": "Cachorro",
       "sexo": "Macho",
       "idade": "6",
       "descricao": "O Scooby chegou no Nicolau com algumas feridas superficiais e com a patinha machucada. O levamos para o veterinário, tratamos sua patinha e as feridas curaram com o tempo. Já foi vacinado e castrado! É um cachorro muito brincalhão e um ótimo caçador. É fascinado com petiscos e bolinhas, mas se assusta facilmente e não gosta de barulhos altos."
