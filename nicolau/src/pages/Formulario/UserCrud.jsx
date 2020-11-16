@@ -16,13 +16,10 @@ const initialState = {
     bairro: "",
     rua: "",
     numero: "",
-    animal: ""
+    animal: "",
   },
   list: [],
 };
-
-
-
 
 function handleSubmit(event) {
   let inputs = document.querySelectorAll("input");
@@ -30,9 +27,7 @@ function handleSubmit(event) {
   inputs.forEach((input) => {
     input.value = "";
   });
-  alert(
-    "Formulário de adoção enviado com sucesso! A resposta chegará em seu e-mail."
-  );
+  
 }
 
 function mascaraCpf() {
@@ -59,6 +54,7 @@ function mascaraTelefone() {
   }
 }
 
+
 export default class UserCrud extends Component {
   state = { ...initialState };
 
@@ -68,15 +64,45 @@ export default class UserCrud extends Component {
     });
   }
 
+  
+
   save(animal) {
-    const user = this.state.user;
-    user.animal = animal
-    const method = user.id ? "put" : "post";
-    const url = user.id ? `${baseUrl}/${user.id}` : baseUrl;
-    axios[method](url, user).then((resp) => {
-      const list = this.getUpdatedList(resp.data);
-      this.setState({ user: initialState.user, list });
-    });
+    alert(
+      "Formulário de adoção enviado com sucesso! A resposta chegará em seu e-mail."
+    );
+
+
+      const user = this.state.user;
+      user.animal = animal;
+      const method = user.id ? "put" : "post";
+      const url = user.id ? `${baseUrl}/${user.id}` : baseUrl;
+      axios[method](url, user).then((resp) => {
+        const list = this.getUpdatedList(resp.data);
+        this.setState({ user: initialState.user, list });
+      });
+    
+  }
+
+  allFilled() {
+    if (
+      this.state.user.nome &&
+      this.state.user.cpf &&
+      this.state.user.telefone &&
+      this.state.user.email &&
+      this.state.user.estado &&
+      this.state.user.cidade &&
+      this.state.user.bairro &&
+      this.state.user.rua &&
+      this.state.user.numero
+    ) {
+      return true;
+    }
+    return false;
+  }
+
+  handleError(){
+    alert("por favor, preencha todos os campos antes de enviar o formulário.")
+    window.location.reload()
   }
 
   getUpdatedList(user, add = true) {
@@ -90,19 +116,20 @@ export default class UserCrud extends Component {
     user[event.target.name] = event.target.value;
     this.setState({ user });
   }
+
   
   renderForm() {
-    const animal = this.props.match.params.id
+    const animal = this.props.match.params.id;
     return (
-      <div className ="formscontainer">
+      <div className="formscontainer">
         <h1>Formulário para Adoção do(a) {animal}</h1>
-        <form className ="inputs" onSubmit={handleSubmit}>
+        <form className="inputs" onSubmit={handleSubmit}>
           {" "}
           <Form.Group>
             {" "}
             <input
               type="text"
-              className ="form-control"
+              className="form-control"
               name="nome"
               minLength="3"
               value={this.state.user.name}
@@ -115,7 +142,7 @@ export default class UserCrud extends Component {
           <Form.Group>
             <input
               type="text"
-              className ="form-control"
+              className="form-control"
               onKeyUp={mascaraCpf}
               maxLength="14"
               minLength="14"
@@ -129,7 +156,7 @@ export default class UserCrud extends Component {
           <Form.Group>
             <input
               type="text"
-              className ="form-control"
+              className="form-control"
               onKeyUp={mascaraTelefone}
               maxLength="15"
               minLength="14"
@@ -144,7 +171,7 @@ export default class UserCrud extends Component {
           <Form.Group controlId="formBasicEmail">
             <input
               type="email"
-              className ="form-control"
+              className="form-control"
               name="email"
               value={this.state.email}
               onChange={(e) => this.updateField(e)}
@@ -153,12 +180,12 @@ export default class UserCrud extends Component {
             />
           </Form.Group>
           <Form.Group className="espacamento1" style={{ marginBottom: "0px" }}>
-            <div className ="form-row">
-              <div className ="col-12 col-sm-6 ">
+            <div className="form-row">
+              <div className="col-12 col-sm-6 ">
                 <Form.Group>
                   <input
                     type="text"
-                    className ="form-control"
+                    className="form-control"
                     name="estado"
                     value={this.state.estado}
                     onChange={(e) => this.updateField(e)}
@@ -167,11 +194,11 @@ export default class UserCrud extends Component {
                   />
                 </Form.Group>
               </div>
-              <div className ="col-12 col-sm-6">
+              <div className="col-12 col-sm-6">
                 <Form.Group>
                   <input
                     type="text"
-                    className ="form-control"
+                    className="form-control"
                     name="cidade"
                     value={this.state.cidade}
                     onChange={(e) => this.updateField(e)}
@@ -182,13 +209,13 @@ export default class UserCrud extends Component {
               </div>
             </div>
           </Form.Group>
-          <Form.Group className ="espacamento2">
+          <Form.Group className="espacamento2">
             <div className="form-row">
               <div className="col-12 col-sm-4">
                 <Form.Group>
                   <input
                     type="text"
-                    className ="form-control"
+                    className="form-control"
                     name="bairro"
                     value={this.state.bairro}
                     onChange={(e) => this.updateField(e)}
@@ -201,7 +228,7 @@ export default class UserCrud extends Component {
                 <Form.Group>
                   <input
                     type="text"
-                    className ="form-control"
+                    className="form-control"
                     name="rua"
                     value={this.state.rua}
                     onChange={(e) => this.updateField(e)}
@@ -214,7 +241,7 @@ export default class UserCrud extends Component {
                 <Form.Group>
                   <input
                     type="number"
-                    className ="form-control"
+                    className="form-control"
                     name="numero"
                     value={this.state.numero}
                     onChange={(e) => this.updateField(e)}
@@ -223,10 +250,10 @@ export default class UserCrud extends Component {
                 </Form.Group>
               </div>
             </div>
-            <Form.Group style={{display: "none"}}>
+            <Form.Group style={{ display: "none" }}>
               <input
                 type="text"
-                className ="form-control"
+                className="form-control"
                 name="animal"
                 value={this.props.match.params.id}
                 onChange={(e) => this.updateField(e)}
@@ -236,10 +263,13 @@ export default class UserCrud extends Component {
             </Form.Group>
             <button
               onClick={() => {
-                this.save(animal)
+                this.allFilled() ?
+                this.save(animal) :
+                this.handleError()
               }}
               type="submit"
-              className ="btn btn-outline-success cadastro col-12"
+              className="btn btn-outline-success cadastro col-12"
+              style={{margin:"0"}}
             >
               Cadastro
             </button>

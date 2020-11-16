@@ -37,11 +37,11 @@ export default function DadosDoCandidat(props) {
     });
   });
 
-  const findAndDeleteAnimal = (nome) => {
-    api.get("animais").then((animais) => {
+  const findAndDeleteAnimal = async (nome) => {
+    await api.get("animais").then((animais) => {
       animais.data.map((animal) => {
         if (animal.nome === nome) {
-          api.delete(`/animais/${animal.id}`);
+          api.delete(`animais/${animal.id}`).catch(err=>console.log(err));
         }
       });
     });
@@ -51,11 +51,12 @@ export default function DadosDoCandidat(props) {
     const values = [...candi];
     values.splice(`${aprov.id}`, 1);
     setCandidato(values);
-    api.delete(`users/${aprov.id}`);
+    console.log(aprov.animal)
+    api.delete(`users/${aprov.id}`).catch(err => alert(err));
     delete aprov.id;
     api.post(`aprovados`, aprov).then(() => {
       setTimeout(() => {
-        window.location.reload();
+        // window.location.reload();
       }, 100);
     });
     const nomeAnimal = aprov.animal;
@@ -71,8 +72,6 @@ export default function DadosDoCandidat(props) {
         window.location.reload();
       }, 100);
     });
-
-    // window.location.reload()
   };
 
   return (
